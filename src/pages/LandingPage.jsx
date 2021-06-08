@@ -11,8 +11,11 @@ import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import Lottie from 'react-lottie';
 import Developer from 'lottie/Developer';
+
+import { motion } from 'framer-motion';
 
 const defaultOptions = {
   loop: true,
@@ -74,14 +77,26 @@ const LandingPage = () => {
               </Typography>
             </Hidden>
           </Box>
-          <Button
-            className={styles.buttonStyle}
-            color='secondary'
-            variant='contained'
-            endIcon={<GetAppRoundedIcon />}
+          <motion.div
+            animate={{ y: 10 }}
+            transition={{
+              repeat: Infinity,
+              duration: 2,
+              type: 'spring',
+              repeatType: 'mirror',
+              ease: 'easeOut',
+            }}
           >
-            Download CV
-          </Button>
+            <Button
+              className={styles.buttonStyle}
+              color='secondary'
+              variant='contained'
+              endIcon={<ArrowDropDownIcon />}
+            >
+              Know more
+            </Button>
+          </motion.div>
+
           <Box>
             <IconButton
               href='https://www.linkedin.com/in/vincent-dizon-34831817b/'

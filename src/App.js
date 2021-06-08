@@ -1,5 +1,6 @@
 import { ThemeProvider, CssBaseline, makeStyles, Box } from '@material-ui/core';
 import Navbar from 'layouts/Navbar';
+import AboutMe from 'pages/AboutMe';
 import LandingPage from 'pages/LandingPage';
 import theme from 'theme/theme';
 
@@ -24,6 +25,7 @@ const App = () => {
       <Box className={styles.container} >
         <Navbar />
         <LandingPage />
+        <AboutMe />
       </Box>
     </ThemeProvider>
   );
