@@ -7,7 +7,6 @@ import {
   Button,
   IconButton,
 } from '@material-ui/core';
-import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';

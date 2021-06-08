@@ -1,33 +1,140 @@
-import React from 'react';
 import {
   Grid,
   Typography,
-  AppBar,
   Box,
-  Toolbar,
   makeStyles,
+  Card,
+  Avatar,
+  Button,
 } from '@material-ui/core';
 
-import PropTypes from 'prop-types';
+import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
+
+const skills = [
+  {
+    title: 'Frontend Development',
+    percentage: '90%',
+    color: '#FFFF00',
+  },
+  {
+    title: 'Backend Development',
+    percentage: '70%',
+    color: '#FE014E',
+  },
+  {
+    title: 'UI/UX Design',
+    percentage: '50%',
+    color: '#0000FF',
+  },
+];
 const useStyles = makeStyles((theme) => ({
   container: {
     color: 'white',
+  },
+  avatar: {
+    width: theme.spacing(7),
+    height: theme.spacing(7),
+    marginBottom: theme.spacing(2),
+  },
+
+  cardContainer: {
+    backgroundColor: '#20316A',
+    padding: '1rem',
+    color: 'white',
+    textIndent: '1.5rem',
+    textAlign: 'justify',
+    textJustify: 'inter-word',
+    borderRadius: '20px',
+  },
+  skillsContainer: {
+    backgroundColor: '#20316A',
+    padding: '1rem',
+    color: 'white',
+    textIndent: '1.5rem',
+    textAlign: 'justify',
+    textJustify: 'inter-word',
+    borderRadius: '20px',
+    width: '100%',
+    [theme.breakpoints.up('lg')]: {
+      width: '30rem',
+    },
+  },
+  buttonStyle: {
+    color: 'white',
+    backgroundColor: '#FE014E',
+    border: 'thin solid white',
+    fontFamily: 'Raleway',
+    margin: '1rem 0',
   },
 }));
 const AboutMe = (props) => {
   const styles = useStyles();
   return (
     <Grid
-      className={styles.container}
       container
+      item
       direction='row'
-      style={{ border: '3px solid red' }}
+      alignItems='center'
+      justifyContent='center'
+      className={styles.container}
     >
-      <Grid>
-        <Box display='flex' alignItems='center'>
-          <hr style={{ width: '1.2rem', border: 'thin solid #FE014E' }} />
-          <Typography variant='subtitle1'>&nbsp; About Me,</Typography>
-        </Box>
+      <Box display='flex' alignItems='center'>
+        <hr style={{ width: '1.2rem', border: 'thin solid #FE014E' }} />
+        <Typography variant='subtitle1'>&nbsp; About Me,</Typography>
+      </Box>
+      <Grid container spacing={1}>
+        <Grid container justify='center' item md={9}>
+          <Card className={styles.cardContainer} raised>
+            <Box display='flex' alignItems='center'>
+              <Avatar alt='Vincent' className={styles.avatar} />
+              <Typography> Hello, I'm Vincent P. Dizon</Typography>
+            </Box>
+            <Typography variant='subtitle1' style={{ fontSize: '1.1rem' }}>
+              I am a web developer from Philippines. I have a rich experience in
+              web development that focuses in{' '}
+              <span style={{ borderBottom: 'thin solid #FE014E' }}>
+                Frontend Development
+              </span>
+              , also I am good at Backend Development.
+            </Typography>
+            <Button
+              className={styles.buttonStyle}
+              color='secondary'
+              variant='contained'
+              endIcon={<GetAppRoundedIcon />}
+            >
+              Download CV
+            </Button>
+          </Card>
+        </Grid>
+        <Grid container justify='flex-end' item md={3}>
+          <Card className={styles.skillsContainer} raised>
+            {skills.map((data) => (
+              <Box key={data.title}>
+                <Typography>{data.title}</Typography>
+                <Box
+                  style={{
+                    width: '100%',
+                    backgroundColor: '#ddd',
+                    borderRadius: '15px',
+                  }}
+                >
+                  <Box
+                    style={{
+                      textAlign: 'right',
+                      color: 'black',
+                      width: `${data.percentage}`,
+                      backgroundColor: `${data.color}`,
+                      borderRadius: '15px',
+                    }}
+                  >
+                    {data.percentage}
+                  </Box>
+                </Box>
+              </Box>
+            ))}
+          </Card>
+        </Grid>
       </Grid>
     </Grid>
   );
