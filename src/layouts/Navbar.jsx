@@ -1,29 +1,10 @@
 import { useState } from 'react';
-import {
-  Grid,
-  makeStyles,
-  Typography,
-  AppBar,
-  Box,
-  Toolbar,
-} from '@material-ui/core';
+import { Grid, Typography, AppBar, Box, Toolbar } from '@material-ui/core';
 import { Cross as Hamburger } from 'hamburger-react';
 import ElevatedScroll from './ElevatedScroll';
 import HamburgerMenu from './HamburgerMenu';
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    [theme.breakpoints.up('md')]: {
-      padding: '0 2rem',
-    },
-    [theme.breakpoints.up('lg')]: {
-      padding: '0 5rem',
-    },
-  },
-}));
-
 const Navbar = (props) => {
-  const styles = useStyles();
   const [open, setOpen] = useState(false);
   return (
     <>

@@ -1,12 +1,4 @@
-import {
-  Grid,
-  makeStyles,
-  Typography,
-  AppBar,
-  Toolbar,
-  Box,
-} from '@material-ui/core';
-import PropTypes from 'prop-types';
+import { makeStyles, Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   container: {
