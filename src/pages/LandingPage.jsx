@@ -10,7 +10,7 @@ import {
 import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import LanguageIcon from '@material-ui/icons/Language';
+import InstagramIcon from '@material-ui/icons/Instagram';
 import Lottie from 'react-lottie';
 import Developer from 'lottie/Developer';
 
@@ -62,7 +62,7 @@ const LandingPage = () => {
             <Typography variant='subtitle1'>&nbsp; Hello,</Typography>
           </Box>
           <Typography className={styles.nameContainer} variant='h1'>
-            I'M <span style={{ color: '#FE014E' }}>VINCENT P. DIZON</span>
+            I'M <span style={{ color: '#FE014E' }}>VINCENT DIZON</span>
           </Typography>
           <Box display='flex'>
             <Typography variant='subtitle1' color='secondary'>
@@ -91,6 +91,12 @@ const LandingPage = () => {
             </IconButton>
             <IconButton href='https://github.com/VncntDzn' color='secondary'>
               <GitHubIcon />
+            </IconButton>
+            <IconButton
+              href='https://www.instagram.com/vpdzn/'
+              color='secondary'
+            >
+              <InstagramIcon />
             </IconButton>
           </Box>
         </Box>
