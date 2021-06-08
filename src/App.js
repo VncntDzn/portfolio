@@ -7,6 +7,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Navbar />
+      <h1>Hello my new portfolio is under development.</h1>
     </ThemeProvider>
   );
 }
