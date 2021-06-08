@@ -1,9 +1,13 @@
+import { ThemeProvider, CssBaseline } from '@material-ui/core';
+import Navbar from 'layouts/Navbar';
+import theme from 'theme/theme';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Navbar />
+    </ThemeProvider>
   );
 }
 

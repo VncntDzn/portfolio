@@ -9,6 +9,13 @@ const theme = createMuiTheme({
             main: '#FCAF18',
         },
     },
+    typography: {
+        h1: {
+            fontFamily: 'Montserrat',
+            fontWeight: 600,
+            fontSize: '2rem'
+        }
+    }
 
 });
 
