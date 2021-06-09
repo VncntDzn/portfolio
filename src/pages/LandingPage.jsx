@@ -64,7 +64,7 @@ const LandingPage = () => {
             <Typography variant='subtitle1'>&nbsp; Hello,</Typography>
           </Box>
           <Typography className={styles.nameContainer} variant='h1'>
-            I'M <span style={{ color: '#FE014E' }}>VINCENT DIZON</span>
+            I'M VINCENT DIZON
           </Typography>
           <Box display='flex'>
             <Typography variant='subtitle1' color='secondary'>

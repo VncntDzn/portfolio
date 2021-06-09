@@ -9,7 +9,7 @@ const Navbar = (props) => {
   return (
     <>
       <ElevatedScroll {...props}>
-        <AppBar color='transparent'>
+        <AppBar color='primary'>
           <Toolbar>
             <Grid container item alignItems='center' justify='space-between'>
               <Typography variant='h1' style={{ color: 'white' }}>

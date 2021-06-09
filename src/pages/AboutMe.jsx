@@ -9,24 +9,8 @@ import {
 } from '@material-ui/core';
 
 import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
+import skills from 'data/skills';
 
-const skills = [
-  {
-    title: 'Frontend Development',
-    percentage: '90%',
-    color: '#FFFF00',
-  },
-  {
-    title: 'Backend Development',
-    percentage: '70%',
-    color: '#FE014E',
-  },
-  {
-    title: 'UI/UX Design',
-    percentage: '50%',
-    color: '#0000FF',
-  },
-];
 const useStyles = makeStyles((theme) => ({
   container: {
     color: 'white',
@@ -70,76 +54,79 @@ const useStyles = makeStyles((theme) => ({
 const AboutMe = (props) => {
   const styles = useStyles();
   return (
-    <Grid
-      container
-      item
-      direction='row'
-      alignItems='center'
-      justifyContent='center'
-      className={styles.container}
-    >
-      <Box display='flex' alignItems='center'>
+    <>
+      <Box display='flex' alignItems='center' width='fit-content'>
         <hr style={{ width: '1.2rem', border: 'thin solid #FE014E' }} />
-        <Typography variant='subtitle1'>&nbsp; About Me,</Typography>
+        <Typography variant='subtitle1' style={{ color: 'white' }}>
+          &nbsp; About Me,
+        </Typography>
       </Box>
-      <Grid container spacing={1}>
-        <Grid container justify='center' item md={9}>
-          <Card className={styles.cardContainer} raised>
-            <Box display='flex' alignItems='center'>
-              <Avatar alt='Vincent' className={styles.avatar} />
-              <Typography> Hello, I'm Vincent P. Dizon</Typography>
-            </Box>
-            <Typography variant='subtitle1' style={{ fontSize: '1.1rem' }}>
-              I am a web developer from Philippines. I have a rich experience in
-              web development that focuses in{' '}
-              <span style={{ borderBottom: 'thin solid #FE014E' }}>
-                Frontend Development
-              </span>
-              , also I am good at Backend Development.
-            </Typography>
-            <Button
-              className={styles.buttonStyle}
-              color='secondary'
-              variant='contained'
-              endIcon={<GetAppRoundedIcon />}
-            >
-              Download CV
-            </Button>
-          </Card>
-        </Grid>
-        <Grid container justify='flex-end' item md={3}>
-          <Card className={styles.skillsContainer} raised>
-            {skills.map((data) => (
-              <Box key={data.title}>
-                <Typography>{data.title}</Typography>
-                <Box
-                  style={{
-                    width: '100%',
-                    backgroundColor: '#ddd',
-                    borderRadius: '15px',
-                  }}
-                >
+
+      <Grid
+        container
+        item
+        direction='row'
+        alignItems='center'
+        justify='center'
+        className={styles.container}
+      >
+        <Grid container spacing={1}>
+          <Grid container justify='center' item md={9}>
+            <Card className={styles.cardContainer} raised>
+              <Box display='flex' alignItems='center'>
+                <Avatar alt='Vincent' className={styles.avatar} />
+                <Typography> Hello, I'm Vincent P. Dizon</Typography>
+              </Box>
+              <Typography variant='subtitle1' style={{ fontSize: '1.1rem' }}>
+                I am a web developer from Philippines. I have a rich experience
+                in web development that focuses in{' '}
+                <span style={{ borderBottom: 'thin solid #FE014E' }}>
+                  Frontend Development
+                </span>
+                , also I am good at Backend Development.
+              </Typography>
+              <Button
+                className={styles.buttonStyle}
+                color='secondary'
+                variant='contained'
+                endIcon={<GetAppRoundedIcon />}
+              >
+                Download CV
+              </Button>
+            </Card>
+          </Grid>
+          <Grid container justify='flex-end' item md={3}>
+            <Card className={styles.skillsContainer} raised>
+              {skills.map((data) => (
+                <Box key={data.title}>
+                  <Typography>{data.title}</Typography>
                   <Box
                     style={{
-                      textAlign: 'right',
-                      color: 'black',
-                      width: `${data.percentage}`,
-                      backgroundColor: `${data.color}`,
+                      width: '100%',
+                      backgroundColor: '#ddd',
                       borderRadius: '15px',
                     }}
                   >
-                    {data.percentage}
+                    <Box
+                      style={{
+                        textAlign: 'right',
+                        color: 'black',
+                        width: `${data.percentage}`,
+                        backgroundColor: `${data.color}`,
+                        borderRadius: '15px',
+                      }}
+                    >
+                      {data.percentage}
+                    </Box>
                   </Box>
                 </Box>
-              </Box>
-            ))}
-          </Card>
+              ))}
+            </Card>
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 };
-
-AboutMe.propTypes = {};
 
 export default AboutMe;
