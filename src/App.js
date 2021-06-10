@@ -1,23 +1,48 @@
-import { ThemeProvider, CssBaseline, Box } from '@material-ui/core';
+import { ThemeProvider, CssBaseline, makeStyles, Box } from '@material-ui/core';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import routes from 'routes/routes'
 import Navbar from 'layouts/Navbar';
 import theme from 'theme/theme';
 
+import PublicRoutes from 'routes/PublicRoutes';
+import Footer from 'pages/Footer';
+
+const useStyles = makeStyles((theme) => ({
+  container: {
+    backgroundColor: '#141f43',
+    padding: '0 1rem',
+
+    [theme.breakpoints.up('sm')]: {
+      padding: '0 2rem',
+
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: '0 10rem',
+    },
+  },
+}));
 const App = () => {
+  const styles = useStyles();
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Navbar />
-      <h1>Hello my new portfolio is under development.</h1>
-      <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center" >
-        <h1>Recent Projects</h1>
-        <ul>
-          <li>E-comm: https://e-commerce-vncntdzn.vercel.app/</li>
-          <li>HMI website: https://www.hmi.com.ph/</li>
-          <li>Traderly website: https://traderly.vercel.app/</li>
-          <li>Anime: https://anime-vpdizon.vercel.app/</li>
-          <li>RTL: https://rtl-react.vercel.app/</li>
-        </ul>
-      </Box>
+      <Router>
+        <Box className={styles.container} >
+          <Navbar />
+          <Switch>
+            {routes.map((data) => (
+              <PublicRoutes
+                exact
+                key={data.name}
+                component={data.component}
+                path={data.path} />
+            ))}
+          </Switch>
+          <Footer />
+        </Box>
+
+
+      </Router>
     </ThemeProvider>
   );
 }

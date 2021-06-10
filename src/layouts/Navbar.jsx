@@ -9,19 +9,28 @@ const Navbar = (props) => {
   return (
     <>
       <ElevatedScroll {...props}>
-        <AppBar style={{ backgroundColor: 'white' }}>
+        <AppBar color='primary'>
           <Toolbar>
             <Grid container item alignItems='center' justify='space-between'>
-              <Typography variant='h1'>Vincent</Typography>
+              <Typography variant='h1' style={{ color: 'white' }}>
+                Vincent
+              </Typography>
               <Box zIndex={1}>
-                <Hamburger toggled={open} toggle={() => setOpen(!open)} />
+                <Hamburger
+                  label='Show menu'
+                  rounded
+                  easing='ease-in'
+                  color='white'
+                  size={22}
+                  toggled={open}
+                  toggle={() => setOpen(!open)}
+                />
               </Box>
             </Grid>
             <HamburgerMenu open={open} />
           </Toolbar>
         </AppBar>
       </ElevatedScroll>
-
       <Toolbar />
     </>
   );
