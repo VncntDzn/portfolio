@@ -42,6 +42,7 @@ const LandingPage = () => {
   const styles = useStyles();
   return (
     <Grid
+      id='home'
       container
       item
       justify='center'

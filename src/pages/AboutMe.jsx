@@ -55,7 +55,13 @@ const AboutMe = (props) => {
   const styles = useStyles();
   return (
     <>
-      <Box display='flex' alignItems='center' width='fit-content' my={5}>
+      <Box
+        id='about'
+        display='flex'
+        alignItems='center'
+        width='fit-content'
+        my={5}
+      >
         <hr style={{ width: '1.2rem', border: 'thin solid #FE014E' }} />
         <Typography variant='h1' style={{ color: 'white' }}>
           &nbsp; About Me

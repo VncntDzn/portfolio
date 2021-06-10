@@ -1,23 +1,16 @@
 import { useState } from 'react';
-import {
-  Grid,
-  Typography,
-  Card,
-  Box,
-  Toolbar,
-  Button,
-  CardContent,
-  makeStyles,
-} from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
+import { Grid, Typography, Card, Box, makeStyles } from '@material-ui/core';
 import CustomPagination from 'components/CustomPagination';
 import webProjects from 'data/webProjects';
+
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
     [theme.breakpoints.up('md')]: {
-      margin: '0 10rem',
+      margin: '0 8rem',
       alignSelf: 'center',
     },
   },
@@ -31,12 +24,18 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: '17rem',
     },
+    [theme.breakpoints.up('lg')]: {
+      width: '27rem',
+    },
   },
   imageContainer: {
     objectFit: 'contain',
     height: '10rem',
     padding: '1.3rem',
     alignSelf: 'center',
+    [theme.breakpoints.up('lg')]: {
+      height: '15rem',
+    },
   },
   buttonStyle: {
     fontFamily: 'Raleway',
@@ -47,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 const WebDevProjects = (props) => {
   const styles = useStyles();
+  const history = useHistory();
   const [currentPage, setCurrentPage] = useState(0);
 
   // get the current page
@@ -75,7 +75,13 @@ const WebDevProjects = (props) => {
                 >
                   {data.name}
                 </Typography>
-                <Typography className={styles.buttonStyle} color='secondary'>
+                <Typography
+                  className={styles.buttonStyle}
+                  color='secondary'
+                  onClick={() => {
+                    history.push(`/project-details/${data.name.toLowerCase()}`);
+                  }}
+                >
                   View Project
                 </Typography>
               </Box>

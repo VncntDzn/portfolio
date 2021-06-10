@@ -21,6 +21,7 @@ const Projects = (props) => {
   return (
     <>
       <Box
+      id="projects"
         display='flex'
         alignItems='center'
         justifyContent='flex-start'
