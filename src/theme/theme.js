@@ -9,6 +9,7 @@ const theme = createMuiTheme({
             main: '#8CACB5',
         },
 
+
     },
     typography: {
         h1: {

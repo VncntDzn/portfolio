@@ -3,6 +3,7 @@ import Navbar from 'layouts/Navbar';
 import AboutMe from 'pages/AboutMe';
 import Experience from 'pages/Experience';
 import LandingPage from 'pages/LandingPage';
+import Projects from 'pages/Projects';
 import theme from 'theme/theme';
 
 
@@ -28,6 +29,7 @@ const App = () => {
         <LandingPage />
         <AboutMe />
         <Experience />
+        <Projects />
       </Box>
     </ThemeProvider>
   );

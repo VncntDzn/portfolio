@@ -1,4 +1,4 @@
-import { makeStyles, Box, Typography } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -7,14 +7,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import WorkIcon from '@material-ui/icons/Work';
 import jobs from 'data/jobs';
 
-const useStyles = makeStyles((theme) => ({
-  headerStyle: {
-    color: 'white',
-  },
-}));
-
 const Experience = (props) => {
-  const styles = useStyles();
   return (
     <>
       <Box
@@ -25,7 +18,7 @@ const Experience = (props) => {
         my='3rem'
       >
         <hr style={{ width: '1.2rem', border: 'thin solid #FE014E' }} />
-        <Typography className={styles.headerStyle} variant='h1'>
+        <Typography style={{ color: 'white' }} variant='h1'>
           &nbsp; My Experiences
         </Typography>
       </Box>
