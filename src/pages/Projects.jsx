@@ -56,6 +56,12 @@ const Projects = (props) => {
         <TabPanel value={value} index={0} style={{ width: '100%' }}>
           <WebDevProjects />
         </TabPanel>
+<TabPanel value={value} index={1} style={{ width: '100%' }}>
+          <Typography>Soon</Typography>
+        </TabPanel>
+<TabPanel value={value} index={2} style={{ width: '100%' }}>
+          <Typography>Soon</Typography>
+        </TabPanel>
       </Box>
     </>
   );
