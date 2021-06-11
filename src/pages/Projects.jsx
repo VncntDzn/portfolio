@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { Box, Typography, Tabs, Tab, makeStyles } from '@material-ui/core';
 import TabPanel from 'components/TabPanel';
-import WebDevProjects from 'components/WebDevProjects';
+import DevProjects from 'components/DevProjects';
+import webProjects from 'data/webProjects';
+import uiProjects from 'data/uiProjects';
 
 const useStyles = makeStyles((theme) => ({
   tabsContainer: {
@@ -21,7 +23,7 @@ const Projects = (props) => {
   return (
     <>
       <Box
-      id="projects"
+        id='projects'
         display='flex'
         alignItems='center'
         justifyContent='flex-start'
@@ -54,13 +56,13 @@ const Projects = (props) => {
         </Tabs>
 
         <TabPanel value={value} index={0} style={{ width: '100%' }}>
-          <WebDevProjects />
+          <DevProjects projects={webProjects} />
         </TabPanel>
-<TabPanel value={value} index={1} style={{ width: '100%' }}>
-          <Typography>Soon</Typography>
+        <TabPanel value={value} index={1} style={{ width: '100%' }}>
+          <Typography style={{ color: 'white' }}>Soon</Typography>
         </TabPanel>
-<TabPanel value={value} index={2} style={{ width: '100%' }}>
-          <Typography>Soon</Typography>
+        <TabPanel value={value} index={2} style={{ width: '100%' }}>
+          <DevProjects projects={uiProjects} />
         </TabPanel>
       </Box>
     </>
