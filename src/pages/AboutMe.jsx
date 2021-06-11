@@ -7,7 +7,7 @@ import {
   Avatar,
   Button,
 } from '@material-ui/core';
-
+import HMI_VD from 'assets/HMI_VD.jpg';
 import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
 import skills from 'data/skills';
 
@@ -80,8 +80,8 @@ const AboutMe = (props) => {
           <Grid container justify='center' item md={9}>
             <Card className={styles.cardContainer} raised>
               <Box display='flex' alignItems='center'>
-                <Avatar alt='Vincent' className={styles.avatar} />
-                <Typography> Hello, I'm Vincent P. Dizon</Typography>
+                <Avatar alt='Vincent' src={HMI_VD} className={styles.avatar} />
+                <Typography> Hello I'm Vincent P. Dizon,</Typography>
               </Box>
               <Typography variant='subtitle1' style={{ fontSize: '1.1rem' }}>
                 I am a web developer from Philippines. I have a rich experience
@@ -91,11 +91,13 @@ const AboutMe = (props) => {
                 </span>
                 , also I am good at Backend Development.
               </Typography>
+
               <Button
                 className={styles.buttonStyle}
                 color='secondary'
                 variant='contained'
                 endIcon={<GetAppRoundedIcon />}
+                href='https://drive.google.com/file/d/1n-xAFa2M0g2yAAAi_3hDJ-F04F3TsdVB/view'
               >
                 Download CV
               </Button>

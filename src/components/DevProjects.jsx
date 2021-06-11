@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Grid, Typography, Card, Box, makeStyles } from '@material-ui/core';
 import CustomPagination from 'components/CustomPagination';
-import webProjects from 'data/webProjects';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -44,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-const WebDevProjects = (props) => {
+const WebDevProjects = ({ projects }) => {
   const styles = useStyles();
   const history = useHistory();
   const [currentPage, setCurrentPage] = useState(0);
@@ -55,13 +54,13 @@ const WebDevProjects = (props) => {
   };
   const PER_PAGE = 4;
   const offset = currentPage * PER_PAGE;
-  let pageCount = webProjects?.length / 3;
+  let pageCount = projects?.length / 3;
 
   return (
     <Grid>
       <Box className={styles.container}>
-        {webProjects?.length &&
-          webProjects.slice(offset, offset + PER_PAGE).map((data, i) => (
+        {projects?.length &&
+          projects.slice(offset, offset + PER_PAGE).map((data, i) => (
             <Card className={styles.cardContainer} key={i}>
               <Box
                 pt={2}
