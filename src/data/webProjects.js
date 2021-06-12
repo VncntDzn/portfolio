@@ -49,8 +49,8 @@ const webProjects = [
         url: 'https://anime-vpdizon.vercel.app/',
         image: Anime,
         description: 'Practice for Redux-toolkit',
-        dev_date: 'March 2021 - May 2021',
-        tech_stack: ['Material-UI', 'ReactJs', 'Firestore', 'Redux-toolkit']
+        dev_date: 'Deceomber 2020',
+        tech_stack: ['SCSS', 'ReactJs', 'Redux-toolkit']
     },
     {
         id: 6,
