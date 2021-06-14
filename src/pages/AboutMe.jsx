@@ -97,7 +97,7 @@ const AboutMe = (props) => {
                 color='secondary'
                 variant='contained'
                 endIcon={<GetAppRoundedIcon />}
-                href='https://drive.google.com/file/d/1n-xAFa2M0g2yAAAi_3hDJ-F04F3TsdVB/view'
+                href='https://drive.google.com/file/d/1RQSkdxc-3wOesj-0RUwpaQ-XSSW-qXkN/view?usp=sharing'
               >
                 Download CV
               </Button>
