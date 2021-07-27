@@ -4,11 +4,18 @@ import Hmi from 'assets/projects/web/Hmi.png';
 import Portfolio from 'assets/projects/web/Portfolio.png';
 import RTL from 'assets/projects/web/RTL.png';
 import Traderly from 'assets/projects/web/Traderly.png';
+import Foodie from 'assets/projects/web/Foodie.png';
 
 
-const webProjects = [
+const webProjects = [{
+        name: 'Foodie',
+        url: 'https://foodie-vpd.vercel.app/',
+        image: Foodie,
+        description: 'Practice for Typescript React',
+        dev_date: 'July 2021',
+        tech_stack: ['Material-UI', 'ReactJs', 'NextJs', 'Typescript']
+    },
     {
-        id: 1,
         name: 'Traderly',
         url: 'https://traderly.vercel.app/',
         image: Traderly,
@@ -17,7 +24,6 @@ const webProjects = [
         tech_stack: ['Material-UI', 'ReactJs', 'NextJs', 'Redux-toolkit', 'Firestore']
     },
     {
-        id: 2,
         name: 'Portfolio',
         url: 'http://vpdizon.vercel.app/',
         image: Portfolio,
@@ -26,7 +32,6 @@ const webProjects = [
         tech_stack: ['Material-UI', 'ReactJs']
     },
     {
-        id: 3,
         name: 'RTL',
         url: 'https://rtl-react.vercel.app/',
         image: RTL,
@@ -35,7 +40,6 @@ const webProjects = [
         tech_stack: ['Material-UI', 'ReactJs', 'RTL', 'Firestore']
     },
     {
-        id: 4,
         name: 'E-comm',
         url: 'https://e-commerce-vncntdzn.vercel.app/',
         image: Ecomm,
@@ -44,7 +48,6 @@ const webProjects = [
         tech_stack: ['Material-UI', 'ReactJs', 'Redux-toolkit', 'Firestore']
     },
     {
-        id: 5,
         name: 'Anime!',
         url: 'https://anime-vpdizon.vercel.app/',
         image: Anime,
@@ -53,7 +56,6 @@ const webProjects = [
         tech_stack: ['SCSS', 'ReactJs', 'Redux-toolkit']
     },
     {
-        id: 6,
         name: 'HMI Official Website',
         url: 'https://www.hmi.com.ph/',
         image: Hmi,

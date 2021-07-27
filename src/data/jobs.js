@@ -20,6 +20,13 @@ const jobs = [
         location: 'Philippines',
         position: 'right',
     },
+    {
+        jobTitle: 'Programmer / Analyst 2 - Vertere Global Solutions',
+        jobDescription: 'To help its client to build their projects.',
+        date: 'July 2021 - Present',
+        location: 'Philippines',
+        position: 'left',
+    },
 ];
 
 export default jobs;
